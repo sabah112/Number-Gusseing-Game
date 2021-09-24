@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Guess the Number</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="GuessingStyle.css">
+  </head>
+
+  <body onload="displayNumOfAttepmts()">
+  <section>
+        <div class="colour"></div>  
+      <div class="colour"></div>  
+      <div class="colour"></div>  
+	  <div class="box">
+	  <div class="square" style="--i:0;"></div>  
+           <div class="square" style="--i:1;"></div>  
+           <div class="square" style="--i:2;"></div>  
+           <div class="square" style="--i:3;"></div>  
+           <div class="square" style="--i:4;"></div>  
+	  <div class="container">
+	  <table>
+	  <tr ><td colspan="3">
+    <h1>Guess the Number</h1></td></tr><tr><td  colspan="3">
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 5 turns or fewer. We'll tell you if your guess was too high or too low. You will also get a hint when you struggle.</p>
+</td></tr>
+    <div class="flex-container">
+	<tr>
+		<td>
+      <label for="guessField">Enter a guess: </label>
+		</td>
+		<td >
+	  <input type="number" id="guess-Field" class="guessField" min="1" max="99" required>
+		</td>
+		<td>
+	  <button class="guessSubmit" id="submit-Number">Submit Guess</button>
+		</td>
+		<td>
+	  <button class="guessSubmit" id="hint"> You've a Hint!!!</button>
+		</td>
+  </tr>
+    </div>
+    <div class="resultParas">
+	<tr>
+	<td  colspan="3">
+      <p class="guesses" id="num-Guesses"></p>
+	  </td><td>
+	  <button class="guessSubmit" id="reset-game">Restart</button>
+	  </td>
+	 </tr>
+	 <tr>
+	 <td  colspan="3">
+      <p class="Result" id="Result"></p>
+	  </td>
+	 </tr>
+	 <tr>
+	 <td>
+      <p class="lowOrHi"></p>
+	  </td>
+	 </tr>
+    </div>
+	</table>
+	
+	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+<script src="GuessingLogic.js" type="text/javascript"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</div>
+</div>
+</section>
+ </body>
+</html>

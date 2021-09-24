@@ -1,0 +1,179 @@
+.flex-container {
+  display: flex;
+  margin: 10px;
+  align-items: flex-start;
+  flex-direction: row;
+}
+ section {  
+      display: flex;  
+      min-height: 100vh;  
+      align-items: center;  
+      justify-content: center;  
+      background: linear-gradient(to bottom, #f7f7fe, #dff1ff);  
+ }  
+ section .colour {  
+      position: absolute;  
+      filter: blur(150px);  
+ }  
+ section .colour:nth-child(1) {  
+      top: -350px;  
+      width: 600px;  
+      height: 600px;  
+      background: #bf4ad4;  
+ }  
+ section .colour:nth-child(2) {  
+      left: 100px;  
+      width: 500px;  
+      height: 500px;  
+      bottom: -150px;  
+      background: #ffa500;  
+ }  
+ section .colour:nth-child(3) {  
+      right: 100px;  
+      bottom: 50px;  
+      width: 300px;  
+      height: 300px;  
+      background: #2b67f3;  
+ }  
+ .box {  
+      position: relative;  
+ }  
+ .box .square {  
+      position: absolute;  
+      border-radius: 10px;  
+      backdrop-filter: blur(5px);  
+      background: rgba(255, 255, 255, 0.1);  
+      animation-delay: calc(-1s * var(--i));  
+      animation: animate 10s linear infinite;  
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);  
+      border: 1px solid rgba(255, 255, 255, 0.5);  
+      border-right: 1px solid rgba(255, 255, 255, 0.2);  
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);  
+ }  
+  @keyframes animate {  
+      0%,  
+      100% {  
+           transform: translateY(-40px);  
+      }  
+      50% {  
+           transform: translateY(40px);  
+      }  
+ }  
+ .box .square:nth-child(1) {  
+      top: -50px;  
+      left: -60px;  
+      width: 100px;  
+      height: 100px;  
+ }  
+ .box .square:nth-child(2) {  
+      z-index: 2;  
+      top: 150px;  
+      left: -100px;  
+      width: 120px;  
+      height: 120px;  
+ }  
+ .box .square:nth-child(3) {  
+      z-index: 2;  
+      width: 80px;  
+      height: 80px;  
+      right: -50px;  
+      bottom: -60px;  
+ }  
+ .box .square:nth-child(4) {  
+      left: 100px;  
+      width: 50px;  
+      height: 50px;  
+      bottom: -80px;  
+ }  
+ .box .square:nth-child(5) {  
+      top: -80px;  
+      left: 140px;  
+      width: 60px;  
+      height: 60px;  
+ }  
+  .container {  
+      width: auto;  
+      display: flex;  
+      min-height: 400px;  
+      position: relative;  
+      border-radius: 10px;  
+      align-items: center;  
+      justify-content: center;  
+      backdrop-filter: blur(5px);  
+      background: rgba(255, 255, 255, 0.1);  
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);  
+      border: 1px solid rgba(255, 255, 255, 0.5);  
+      border-right: 1px solid rgba(255, 255, 255, 0.2);  
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);  
+ }  
+input {
+  width: auto;
+  box-sizing: border-box;
+  border: 2px solid #c1896d;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+h1{
+	background-color: #f9e8ce;
+		color: #6f4638; 
+  text-transform: uppercase;
+  font-family: Courier New;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+P{
+	color: #6f4638; 
+  text-transform: uppercase;
+    font-family: Courier New;
+  margin-left: 20px;
+}
+label{
+	color: #6f4638;
+	margin:auto;
+  margin-left: 20px;
+    font-family: Courier New;
+  padding: 8px;
+}
+button{
+	background-color: #ab8370; /* Green */
+	  font-family: Courier New;
+  border: none;
+  margin:auto;
+  color: white;
+  border-radius: 3px;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+font-size: 15px;
+}
+@keyframes glowing {
+        0% {
+          background-color: #FF0000;
+          box-shadow: 0 0 5px #FF0000;
+        }
+        50% {
+          background-color: #FF4500;
+          box-shadow: 0 0 20px #FF4500;
+        }
+        100% {
+          background-color: #FF6347;
+          box-shadow: 0 0 5px #FF6347;
+        }
+      }
+#hint{
+	animation: glowing 1300ms infinite;
+	background-color: #FF0000;
+	margin:auto;
+}
+.guessSubmit:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#num-Guesses{
+	background-color: #F000;
+}
+	
